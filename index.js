@@ -29,10 +29,10 @@ function matchParentsWithChildrens(parentFileName, childrenFileName) {
         }
         parentsData[i].childrens = arrayOfChildren
       }
-      let newFormat = JSON.stringify(parentsData,null,2)
-      fs.writeFile(parentFileName,newFormat,function(err,data){
-        if(err) throw err
-      })
+      // let newFormat = JSON.stringify(parentsData,null,2)
+      // fs.writeFile(parentFileName,newFormat,function(err,data){
+      //   if(err) throw err
+      // })
       console.log(parentsData)
     })
     .catch(err=>{
