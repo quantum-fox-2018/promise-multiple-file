@@ -55,10 +55,10 @@ function matchParentsWithChildrens(parentFileName, childrenFileName) {
 }
 
 
-// matchParentsWithChildrens('./parents.json', './childrens.json');
+matchParentsWithChildrens('./parents.json', './childrens.json');
 console.log("Notification : Data sedang diproses..");
 sleep.sleep(1)
 
 // // for Release 2
-matchParentsWithChildrens('./parents.json', './not_a_real_file.json');
+// matchParentsWithChildrens('./parents.json', './not_a_real_file.json');
 // matchParentsWithChildrens('./not_a_real_file.json', './also_not_a_real_file.json');
