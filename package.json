@@ -10,5 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "sleep": "^5.1.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quantum-fox-2018/promise-multiple-file.git"
+  },
+  "bugs": {
+    "url": "https://github.com/quantum-fox-2018/promise-multiple-file/issues"
+  },
+  "homepage": "https://github.com/quantum-fox-2018/promise-multiple-file#readme"
 }
