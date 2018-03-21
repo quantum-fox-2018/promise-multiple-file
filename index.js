@@ -30,10 +30,10 @@ function matchParentsWithChildrens(parentFileName, childrenFileName) {
       }
       console.log(getParent);
     }).catch(err=>{
-      console.log(err);
+      console.log('Terjadi error pada proses pembacaan data');
     })
   }).catch(err=>{
-    console.log(err);
+    console.log('Terjadi error pada proses pembacaan data');
   })
 
 }
@@ -42,5 +42,5 @@ matchParentsWithChildrens('./parents.json', './childrens.json');
 console.log("Notification : Data sedang diproses !");
 
 // for Release 2
-// matchParentsWithChildrens('./parents.json', './not_a_real_file.json');
-// matchParentsWithChildrens('./not_a_real_file.json', './also_not_a_real_file.json');
+matchParentsWithChildrens('./parents.json', './not_a_real_file.json');
+matchParentsWithChildrens('./not_a_real_file.json', './also_not_a_real_file.json');
