@@ -4,12 +4,18 @@ var sleep = require('sleep');
 function readFilePromise(fileName) {
   return new Promise(function (resolve, reject){
     fs.readFile(fileName, 'utf8', (err,data)=>{
-      let dataParse = JSON.parse(data)
-      if(!err){
-        resolve(dataParse)
+
+      if(data != undefined){
+        let dataParse = JSON.parse(data)
+        if(err){
+          reject(`Terjadi error pada saat pembacaan data!`)
+        } else {
+          resolve(dataParse)
+        }
       } else {
-        reject(err)
+        reject(`Terjadi error pada saat pembacaan data!`)
       }
+      
     })
   })
 }
@@ -35,6 +41,7 @@ function matchParentsWithChildrens(parentFileName, childrenFileName) {
       }
 
       console.log(parent_data)
+
     })
     .catch(err =>{
       console.log(err)
@@ -48,10 +55,10 @@ function matchParentsWithChildrens(parentFileName, childrenFileName) {
 }
 
 
-matchParentsWithChildrens('./parents.json', './childrens.json');
-console.log("Notification : Data sedang diproses !");
+// matchParentsWithChildrens('./parents.json', './childrens.json');
+console.log("Notification : Data sedang diproses..");
 sleep.sleep(1)
 
 // // for Release 2
-// matchParentsWithChildrens('./parents.json', './not_a_real_file.json');
+matchParentsWithChildrens('./parents.json', './not_a_real_file.json');
 // matchParentsWithChildrens('./not_a_real_file.json', './also_not_a_real_file.json');
